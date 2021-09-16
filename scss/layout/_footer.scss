@@ -1,0 +1,25 @@
+footer {
+  background-color: hsl(168, 48%, 72%);
+  padding: 3em 0 2em;
+  text-align: center;
+  color: $dark-desaturated-cyan;
+
+  img {
+    margin-bottom: 1.5em;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 4em auto 0;
+  }
+
+  nav {
+    width: 80%;
+
+    a {
+      color: $dark-moderate-cyan;
+    }
+  }
+}

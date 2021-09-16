@@ -1,0 +1,135 @@
+.heading {
+  font-family: "Fraunces", sans-serif;
+  font-size: 1.75em;
+}
+
+.text {
+  padding: 3em 1.5em;
+  text-align: center;
+
+  p {
+    margin: 1.5em 0 2em;
+    color: $dark-grayish-blue;
+    line-height: 1.7;
+  }
+}
+
+.learn-cta {
+  font-family: "Fraunces", sans-serif;
+  color: black;
+  border-bottom: 5px solid $yellow;
+  text-transform: uppercase;
+}
+
+.red {
+  border-bottom: 5px solid $soft-red;
+}
+
+//Graphic section
+
+.graphic-text-section {
+  position: relative;
+
+  .image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+    left: 0;
+    padding: 0 1em;
+    text-align: center;
+    color: $dark-desaturated-cyan;
+
+    .heading {
+      margin-bottom: 1em;
+      font-weight: 900;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+  }
+
+  .blue {
+    color: $dark-blue;
+  }
+}
+
+//TESTIMONIALS
+
+.testimonials {
+  padding: 3em 2em 2em;
+  text-align: center;
+
+  .title {
+    margin-bottom: 3em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $grayish-blue;
+    font-size: 1em;
+  }
+
+  .review-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .review {
+    margin-bottom: 4em;
+  }
+
+  .client-img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+  }
+
+  .quote {
+    line-height: 1.7;
+    margin: 1.5em 0;
+    color: $very-dark-grayish-blue;
+  }
+
+  .name {
+    color: $very-dark-desaturated-blue;
+    margin-bottom: 1em;
+    font-weight: 900;
+  }
+
+  .job {
+    font-size: 1rem;
+    color: $grayish-blue;
+  }
+}
+
+//grid pictures
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+@media screen and (min-width: 600px) {
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .transform {
+    order: 1;
+  }
+
+  .egg-img { 
+    order: 2;
+  }
+
+  .testimonials {
+    .review-group {
+      flex-direction: row;
+    }
+  }
+}
