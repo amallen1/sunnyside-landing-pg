@@ -3,7 +3,7 @@ header {
   background-image: url("/images/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 75%;
+  background-position: center 80%;
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 1.5em 0;
 
   //this is here because of navigation alignment issues
   a {
@@ -28,20 +28,34 @@ nav {
 .header-content {
   display: flex;
   flex-direction: column;
-}
 
-.intro {
-  text-align: center;
-  color: #fff;
-  font-family: "Fraunces", sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 2.25em;
-  margin: 2em 0 1.75em;
-}
+  .intro {
+    text-align: center;
+    color: #fff;
+    font-family: "Fraunces", sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 2.25em;
+    margin: 2em 0 1.25em;
+  }
 
-.down-arrow {
-  align-self: center;
+  .down-arrow {
+    align-self: center;
+    animation-duration: 2.25s;
+    animation-name: slidedown;
+    animation-iteration-count: infinite;
+
+    @keyframes slidedown {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(100px);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -70,8 +84,6 @@ nav {
       a {
         color: $white;
         position: relative;
-
-        // transition: all 1 ease-in-out;
 
         &::after {
           content: "";
@@ -107,6 +119,6 @@ nav {
   }
 
   .intro {
-    letter-spacing: .25em;
+    letter-spacing: 0.25em;
   }
 }
