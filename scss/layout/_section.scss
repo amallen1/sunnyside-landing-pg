@@ -1,6 +1,17 @@
-.heading {
-  font-family: "Fraunces", sans-serif;
-  font-size: 1.75em;
+.content-grid {
+  .heading {
+    font-size: 1.75em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
 }
 
 .text {
@@ -109,27 +120,57 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 710px) {
   .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
+    grid-template-rows: 1fr 1fr;
 
-  .transform {
-    order: 1;
-  }
+    .mobile {
+      display: none;
+    }
 
-  .egg-img { 
-    order: 2;
+    .desktop {
+      display: block;
+    }
+
+    .transform {
+      order: -1;
+    }
+
+    
+
+    .text {
+      text-align: left;
+      font-size: .875rem;
+    }
   }
 
   .testimonials {
+    padding: 8em 5em 5em;
+    .title {
+      letter-spacing: 7px;
+    }
+
     .review-group {
       flex-direction: row;
     }
+
+    .review {
+      padding: 2em 1.25em;
+    }
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
 }
