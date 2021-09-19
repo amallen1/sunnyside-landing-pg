@@ -1,11 +1,11 @@
-.content-grid {
+.service-content {
   .heading {
     font-size: 1.75em;
   }
 
   img {
     width: 100%;
-    height: auto;
+    //height: auto;
     display: block;
   }
 
@@ -14,7 +14,7 @@
   }
 }
 
-.text {
+.service {
   padding: 3em 1.5em;
   text-align: center;
   display: flex;
@@ -64,21 +64,27 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 65%;
+    bottom: 25%;
     left: 0;
-    padding: 0 1em;
+    height: 50px;
     text-align: center;
+    line-height: 1.5;
     color: $dark-desaturated-cyan;
 
     .heading {
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
       font-weight: 900;
     }
 
     p {
       line-height: 1.7;
       font-size: 1rem;
+      width: max(60%, 350px);
     }
+  }
+
+  .service-images {
+    position: relative;
   }
 
   .blue {
@@ -132,12 +138,10 @@
   }
 }
 
-//grid pictures
-
-.photo-grid {
+//Photo gallery section
+.photo-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 
   img {
     width: 100%;
@@ -146,10 +150,35 @@
   }
 }
 
-@media screen and (min-width: 710px) {
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 690px) {
+  .service-content {
+    .row {
+      display: flex;
+
+      .graphic-text-section {
+        .heading {
+          //font-size: 1.2em;
+        }
+
+        p {
+          // width: 52%;
+          // width: max(325px, 100%);
+          //width: max(325px, 52%);
+          width: 52%;
+        }
+
+        .service-text {
+          font-size: max(1.2vmax, 0.7rem);
+        }
+
+
+      }
+    }
+
+    .egg-img,
+    .red-cup {
+      flex-basis: 50%;
+    }
 
     .mobile-img {
       display: none;
@@ -160,12 +189,41 @@
     }
 
     .transform {
+      h2 {
+        width: 80%;
+
+      }
       order: -1;
+      padding: 0;
     }
 
-    .text {
+    .red-cup {
+      padding: 0;
+    }
+
+    .service-images {
+      flex-basis: 50%;
+    }
+
+    .service {
       text-align: left;
-      font-size: 0.875rem;
+      flex-basis: 50%;
+      align-items: center;
+      padding: 0;
+    }
+
+    .text-content-box {
+      width: 60%;
+      min-width: 270px;
+
+      .service-text {
+        font-size: max(1.2vmax, 0.7rem);
+      }
+    }
+
+    .heading {
+      font-weight: 900;
+      font-size: max(2vmax, 1.2rem);
     }
   }
 
@@ -185,8 +243,7 @@
     }
   }
 
-  .photo-grid {
+  .photo-gallery {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
   }
 }
