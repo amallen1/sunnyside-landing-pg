@@ -50,9 +50,16 @@
 .yellow::after {
   background-color: hsla(51, 100%, 49%, 0.329);
 }
+.yellow:hover::after {
+  background-color: $yellow;
+}
 
 .red::after {
   background-color: hsla(7, 99%, 70%, 0.384);
+}
+
+.red:hover::after {
+  background-color: $soft-red;
 }
 
 //Graphic text section
@@ -148,6 +155,10 @@
     height: auto;
     display: block;
   }
+
+  .desktop-img {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 690px) {
@@ -170,8 +181,6 @@
         .service-text {
           font-size: max(1.2vmax, 0.7rem);
         }
-
-
       }
     }
 
@@ -191,7 +200,6 @@
     .transform {
       h2 {
         width: 80%;
-
       }
       order: -1;
       padding: 0;
@@ -245,5 +253,13 @@
 
   .photo-gallery {
     grid-template-columns: repeat(4, 1fr);
+
+    .mobile-img {
+      display: none;
+    }
+    
+    .desktop-img {
+      display: block;
+    }
   }
 }

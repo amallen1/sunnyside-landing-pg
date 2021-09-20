@@ -70,14 +70,66 @@ nav {
   width: 90%;
   margin: 0 auto;
   padding: 1.5em 0;
+  position: relative;
 }
 nav a {
   display: flex;
   align-items: center;
 }
+nav .menu {
+  cursor: pointer;
+  position: relative;
+}
 
 .nav-links {
   display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.mobile-menu-wrapper {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  z-index: 10;
+}
+.mobile-menu-wrapper .triangle {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid white;
+  border-left: 25px solid transparent;
+}
+.mobile-menu-wrapper .mobile-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu-wrapper a {
+  margin: 1em 0;
+  color: #818498;
+  font-weight: 600;
+}
+.mobile-menu-wrapper a:hover {
+  color: #5a636c;
+}
+.mobile-menu-wrapper .yellow-button {
+  background-color: #fad400;
+  padding: 1em 1.5em;
+  border-radius: 50px;
+  font-family: "Fraunces", sans-serif;
+  color: black;
+  margin-bottom: 2em;
+}
+.mobile-menu-wrapper .yellow-button:hover {
+  background-color: rgba(250, 212, 0, 0.7);
 }
 
 .header-content {
@@ -118,8 +170,13 @@ nav a {
 
   nav {
     align-items: center;
+    position: relative;
   }
   nav .menu {
+    display: none;
+  }
+
+  .mobile-menu-wrapper {
     display: none;
   }
 
@@ -158,7 +215,8 @@ nav a {
     color: black;
   }
   .nav-links .contact-cta:hover {
-    box-shadow: 0 5px 15px white;
+    background-color: rgba(255, 255, 255, 0.342);
+    color: white;
   }
 
   .intro {
@@ -211,8 +269,16 @@ nav a {
   background-color: rgba(250, 212, 0, 0.329);
 }
 
+.yellow:hover::after {
+  background-color: #fad400;
+}
+
 .red::after {
   background-color: rgba(254, 120, 103, 0.384);
+}
+
+.red:hover::after {
+  background-color: #fe7867;
 }
 
 .graphic-text-section {
@@ -293,6 +359,9 @@ nav a {
   height: auto;
   display: block;
 }
+.photo-gallery .desktop-img {
+  display: none;
+}
 
 @media screen and (min-width: 690px) {
   .service-content .row {
@@ -361,6 +430,12 @@ nav a {
   .photo-gallery {
     grid-template-columns: repeat(4, 1fr);
   }
+  .photo-gallery .mobile-img {
+    display: none;
+  }
+  .photo-gallery .desktop-img {
+    display: block;
+  }
 }
 footer {
   background-color: #95dacc;
@@ -377,6 +452,7 @@ footer .social-icons {
 }
 footer .social-icons img {
   margin: 0 1em;
+  cursor: pointer;
 }
 footer nav {
   justify-content: center;
@@ -384,4 +460,7 @@ footer nav {
 footer nav a {
   color: #458c7e;
   margin: 0 1em;
+}
+footer nav a:hover {
+  color: white;
 }

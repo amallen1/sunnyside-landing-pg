@@ -18,13 +18,18 @@
     <style></style>
   </head>
   <body>
-    <!-- header start -->
+    <!-- header /navbar START -->
     <header>
       <nav>
         <a href="#"
           ><img class="logo" src="/images/logo.svg" alt="Sunnyside Logo"
         /></a>
-        <img class="menu" src="/images/icon-hamburger.svg" alt="Menu" />
+        <img
+          id="menu-btn"
+          class="menu"
+          src="/images/icon-hamburger.svg"
+          alt="Menu"
+        />
 
         <ul class="nav-links">
           <li><a href="#">About</a></li>
@@ -32,6 +37,17 @@
           <li><a href="#">Projects</a></li>
           <li class=""><a class="contact-cta" href="#">CONTACT</a></li>
         </ul>
+
+        <div class="mobile-menu-wrapper" id="nav-links">
+          <div class="triangle"></div>
+
+          <ul class="mobile-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a class="contact-cta yellow-button" href="#">CONTACT</a></li>
+          </ul>
+        </div>
       </nav>
 
       <div class="header-content">
@@ -43,10 +59,10 @@
         />
       </div>
     </header>
-    <!-- header end -->
+    <!-- header/navbar END -->
 
     <main>
-      <!-- service content start -->
+      <!-- service content START -->
       <div class="service-content">
         <div class="row">
           <div class="service-images">
@@ -159,9 +175,9 @@
           </div>
         </div>
       </div>
-      <!-- service content end -->
+      <!-- service content END -->
 
-      <!-- testimonials start-->
+      <!-- testimonials START-->
       <section class="testimonials">
         <h4 class="title">Client Testimonials</h4>
         <div class="review-group">
@@ -199,29 +215,62 @@
           </div>
         </div>
       </section>
-      <!-- testimonials end -->
+      <!-- testimonials END -->
 
-      <!-- photo gallery start -->
+      <!-- photo gallery START -->
       <section class="photo-gallery">
         <img
+          class="mobile-img"
           src="/images/mobile/image-gallery-milkbottles.jpg"
           alt="Milk bottles"
         />
+
         <img
+          class="desktop-img"
+          src="/images/desktop/image-gallery-milkbottles.jpg"
+          alt="Milk bottles"
+        />
+
+        <img
+          class="mobile-img"
           src="/images/mobile/image-gallery-orange.jpg"
           alt="Orange on a plate"
         />
-        <img src="/images/mobile/image-gallery-cone.jpg" alt="Ice cream cone" />
 
         <img
+          class="desktop-img"
+          src="/images/desktop/image-gallery-orange.jpg"
+          alt="Orange on a plate"
+        />
+
+        <img
+          class="mobile-img"
+          src="/images/mobile/image-gallery-cone.jpg"
+          alt="Ice cream cone"
+        />
+
+        <img
+          class="desktop-img"
+          src="/images/desktop/image-gallery-cone.jpg"
+          alt="Ice cream cone"
+        />
+
+        <img
+          class="mobile-img"
           src="/images/mobile/image-gallery-sugar-cubes.jpg"
+          alt="Sugar cubes"
+        />
+
+        <img
+          class="desktop-img"
+          src="/images/desktop/image-gallery-sugarcubes.jpg"
           alt="Sugar cubes"
         />
       </section>
     </main>
-    <!-- photo gallery end -->
+    <!-- photo gallery END -->
 
-    <!-- footer start-->
+    <!-- footer START -->
     <footer>
       <img class="ftr-logo" src="/images/logo.svg" alt="Sunnyside logo" />
 
@@ -238,12 +287,7 @@
         <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
       </div>
     </footer>
-    <!-- footer end -->
-
-    <!-- About
-  Services
-  Projects
-  Contact -->
+    <!-- footer END -->
 
     <!-- <footer class="attribution">
       Challenge by
@@ -251,5 +295,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Aniya</a>.
     </footer> -->
+    <script src="app.js"></script>
   </body>
 </html>
