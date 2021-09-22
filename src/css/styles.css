@@ -30,7 +30,7 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -76,15 +76,12 @@ nav a {
   display: flex;
   align-items: center;
 }
-nav .menu {
+nav .menu-btn {
   cursor: pointer;
   position: relative;
 }
 
-.nav-links {
-  display: none;
-}
-
+.desktop-links,
 .hide {
   display: none;
 }
@@ -94,8 +91,8 @@ nav .menu {
   width: 100%;
   position: absolute;
   top: 100px;
-  right: 0px;
   z-index: 10;
+  padding-top: 1em;
 }
 .mobile-menu-wrapper .triangle {
   position: absolute;
@@ -109,18 +106,16 @@ nav .menu {
 .mobile-menu-wrapper .mobile-links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .mobile-menu-wrapper a {
   margin: 1em 0;
   color: #818498;
-  font-weight: 600;
 }
 .mobile-menu-wrapper a:hover {
   color: #5a636c;
 }
-.mobile-menu-wrapper .yellow-button {
+.mobile-menu-wrapper .contact-cta-mobile {
   background-color: #fad400;
   padding: 1em 1.5em;
   border-radius: 50px;
@@ -128,7 +123,7 @@ nav .menu {
   color: black;
   margin-bottom: 2em;
 }
-.mobile-menu-wrapper .yellow-button:hover {
+.mobile-menu-wrapper .contact-cta-mobile:hover {
   background-color: rgba(250, 212, 0, 0.7);
 }
 
@@ -139,7 +134,6 @@ nav .menu {
 .header-content .intro {
   text-align: center;
   color: #fff;
-  font-family: "Fraunces", sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-size: 2.25em;
@@ -164,34 +158,25 @@ nav .menu {
   header {
     background-image: url("/images/desktop/image-header.jpg");
     background-position: bottom center;
-    max-width: none;
     height: 85vh;
   }
 
-  nav {
-    align-items: center;
-    position: relative;
-  }
-  nav .menu {
+  .menu-btn {
     display: none;
   }
 
-  .mobile-menu-wrapper {
-    display: none;
-  }
-
-  .nav-links {
+  .desktop-links {
     display: flex;
     align-items: center;
   }
-  .nav-links li {
+  .desktop-links li {
     padding: 0 1.5rem;
   }
-  .nav-links li a {
+  .desktop-links li a {
     color: white;
     position: relative;
   }
-  .nav-links li a::after {
+  .desktop-links li a::after {
     content: "";
     position: absolute;
     background-color: white;
@@ -201,22 +186,25 @@ nav .menu {
     transition: 0.3s;
     width: 0%;
   }
-  .nav-links li a:not(.contact-cta):hover::after {
+  .desktop-links li a:not(.contact-cta):hover::after {
     width: 100%;
   }
-  .nav-links .contact-cta {
+  .desktop-links .contact-cta {
     background-color: white;
     padding: 0.75rem 1rem;
     border-radius: 50px;
     font-family: "Fraunces", sans-serif;
     font-size: 1rem;
-    margin-left: 1em;
     transition: all 0.2s ease-in-out;
     color: black;
   }
-  .nav-links .contact-cta:hover {
+  .desktop-links .contact-cta:hover {
     background-color: rgba(255, 255, 255, 0.342);
     color: white;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
   }
 
   .intro {
@@ -225,6 +213,7 @@ nav .menu {
 }
 .service-content .heading {
   font-size: 1.75em;
+  font-weight: 900;
 }
 .service-content img {
   width: 100%;
@@ -238,10 +227,9 @@ nav .menu {
   padding: 3em 1.5em;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
-.service p {
+.service .service-text {
   margin: 1.5em 0 2em;
   color: #818498;
   line-height: 1.7;
@@ -249,6 +237,8 @@ nav .menu {
 
 .learn-cta {
   font-family: "Fraunces", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
   color: black;
   text-transform: uppercase;
   position: relative;
@@ -257,9 +247,9 @@ nav .menu {
 .learn-cta::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 143px;
   height: 10px;
-  left: 0px;
+  left: -10px;
   bottom: -2px;
   border-radius: 8px;
   z-index: -10;
@@ -284,13 +274,15 @@ nav .menu {
 .graphic-text-section {
   position: relative;
 }
+.graphic-text-section .service-images {
+  position: relative;
+}
 .graphic-text-section .image-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   bottom: 25%;
-  left: 0;
   height: 50px;
   text-align: center;
   line-height: 1.5;
@@ -298,56 +290,14 @@ nav .menu {
 }
 .graphic-text-section .image-text .heading {
   margin-bottom: 1rem;
-  font-weight: 900;
 }
 .graphic-text-section .image-text p {
   line-height: 1.7;
   font-size: 1rem;
   width: max(60%, 350px);
 }
-.graphic-text-section .service-images {
-  position: relative;
-}
 .graphic-text-section .blue {
   color: #19536b;
-}
-
-.testimonials {
-  padding: 3em 2em 2em;
-  text-align: center;
-}
-.testimonials .title {
-  margin-bottom: 3em;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #a7abae;
-  font-size: 1em;
-}
-.testimonials .review-group {
-  display: flex;
-  flex-direction: column;
-}
-.testimonials .review {
-  margin-bottom: 4em;
-}
-.testimonials .client-img {
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-}
-.testimonials .quote {
-  line-height: 1.7;
-  margin: 1.5em 0;
-  color: #5a636c;
-}
-.testimonials .name {
-  color: #23303e;
-  margin-bottom: 1em;
-  font-weight: 900;
-}
-.testimonials .job {
-  font-size: 1rem;
-  color: #a7abae;
 }
 
 .photo-gallery {
@@ -367,34 +317,14 @@ nav .menu {
   .service-content .row {
     display: flex;
   }
-  .service-content .row .graphic-text-section p {
-    width: 52%;
-  }
-  .service-content .row .graphic-text-section .service-text {
-    font-size: max(1.2vmax, 0.7rem);
-  }
-  .service-content .egg-img,
-.service-content .red-cup {
-    flex-basis: 50%;
-  }
-  .service-content .mobile-img {
-    display: none;
-  }
-  .service-content .desktop-img {
-    display: block;
-  }
-  .service-content .transform {
-    order: -1;
-    padding: 0;
-  }
-  .service-content .transform h2 {
-    width: 80%;
-  }
-  .service-content .red-cup {
-    padding: 0;
-  }
   .service-content .service-images {
     flex-basis: 50%;
+  }
+  .service-content .service-images .mobile-img {
+    display: none;
+  }
+  .service-content .service-images .desktop-img {
+    display: block;
   }
   .service-content .service {
     text-align: left;
@@ -402,29 +332,26 @@ nav .menu {
     align-items: center;
     padding: 0;
   }
-  .service-content .text-content-box {
+  .service-content .service .text-content-box {
     width: 60%;
-    min-width: 270px;
   }
-  .service-content .text-content-box .service-text {
+  .service-content .service .text-content-box .service-text {
     font-size: max(1.2vmax, 0.7rem);
   }
   .service-content .heading {
-    font-weight: 900;
     font-size: max(2vmax, 1.2rem);
   }
-
-  .testimonials {
-    padding: 8em 5em 5em;
+  .service-content .transform {
+    order: -1;
   }
-  .testimonials .title {
-    letter-spacing: 7px;
+  .service-content .transform h2 {
+    width: 80%;
   }
-  .testimonials .review-group {
-    flex-direction: row;
+  .service-content .graphic-text-section p {
+    width: 52%;
   }
-  .testimonials .review {
-    padding: 2em 1.25em;
+  .service-content .graphic-text-section .service-text {
+    font-size: max(1.2vmax, 0.7rem);
   }
 
   .photo-gallery {
@@ -435,6 +362,64 @@ nav .menu {
   }
   .photo-gallery .desktop-img {
     display: block;
+  }
+}
+.testimonials {
+  padding: 3em 2em 2em;
+  text-align: center;
+}
+.testimonials .title {
+  margin-bottom: 3em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a7abae;
+  font-size: 1em;
+}
+.testimonials .review-group {
+  display: flex;
+  flex-direction: column;
+}
+.testimonials .review {
+  margin-bottom: 4em;
+}
+.testimonials .review .client-img {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+.testimonials .review .quote {
+  line-height: 1.7;
+  margin: 1.5em 0;
+  color: #5a636c;
+}
+.testimonials .review .name {
+  color: #23303e;
+  margin-bottom: 1em;
+  font-weight: 900;
+}
+.testimonials .review .job {
+  font-size: 1rem;
+  color: #a7abae;
+}
+
+@media screen and (min-width: 690px) {
+  .testimonials {
+    padding: 8em 5em 5em;
+  }
+  .testimonials .title {
+    letter-spacing: 7px;
+  }
+  .testimonials .review-group {
+    flex-direction: row;
+  }
+  .testimonials .review {
+    padding: 2em 2em;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 690px) and (max-width: 900px) {
+  .testimonials {
+    padding: 8em 0em 5em;
   }
 }
 footer {
@@ -448,7 +433,7 @@ footer .ftr-logo {
 footer .social-icons {
   display: flex;
   justify-content: center;
-  margin: 3.5em auto 0;
+  margin: 3.5em auto;
 }
 footer .social-icons img {
   margin: 0 1em;

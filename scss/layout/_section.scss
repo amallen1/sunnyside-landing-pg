@@ -1,11 +1,12 @@
+// Service Section
 .service-content {
   .heading {
     font-size: 1.75em;
+    font-weight: 900;
   }
 
   img {
     width: 100%;
-    //height: auto;
     display: block;
   }
 
@@ -18,10 +19,9 @@
   padding: 3em 1.5em;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 
-  p {
+  .service-text {
     margin: 1.5em 0 2em;
     color: $dark-grayish-blue;
     line-height: 1.7;
@@ -30,6 +30,8 @@
 
 .learn-cta {
   font-family: "Fraunces", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
   color: black;
   text-transform: uppercase;
   position: relative;
@@ -38,9 +40,9 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 143px;
     height: 10px;
-    left: 0px;
+    left: -10px;
     bottom: -2px;
     border-radius: 8px;
     z-index: -10;
@@ -50,6 +52,7 @@
 .yellow::after {
   background-color: hsla(51, 100%, 49%, 0.329);
 }
+
 .yellow:hover::after {
   background-color: $yellow;
 }
@@ -66,13 +69,16 @@
 .graphic-text-section {
   position: relative;
 
+  .service-images {
+    position: relative;
+  }
+
   .image-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     bottom: 25%;
-    left: 0;
     height: 50px;
     text-align: center;
     line-height: 1.5;
@@ -80,7 +86,6 @@
 
     .heading {
       margin-bottom: 1rem;
-      font-weight: 900;
     }
 
     p {
@@ -90,58 +95,8 @@
     }
   }
 
-  .service-images {
-    position: relative;
-  }
-
   .blue {
     color: $dark-blue;
-  }
-}
-
-//Testimonial Section
-
-.testimonials {
-  padding: 3em 2em 2em;
-  text-align: center;
-
-  .title {
-    margin-bottom: 3em;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: $grayish-blue;
-    font-size: 1em;
-  }
-
-  .review-group {
-    display: flex;
-    flex-direction: column;
-  }
-  .review {
-    margin-bottom: 4em;
-  }
-
-  .client-img {
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
-  }
-
-  .quote {
-    line-height: 1.7;
-    margin: 1.5em 0;
-    color: $very-dark-grayish-blue;
-  }
-
-  .name {
-    color: $very-dark-desaturated-blue;
-    margin-bottom: 1em;
-    font-weight: 900;
-  }
-
-  .job {
-    font-size: 1rem;
-    color: $grayish-blue;
   }
 }
 
@@ -165,52 +120,18 @@
   .service-content {
     .row {
       display: flex;
-
-      .graphic-text-section {
-        .heading {
-          //font-size: 1.2em;
-        }
-
-        p {
-          // width: 52%;
-          // width: max(325px, 100%);
-          //width: max(325px, 52%);
-          width: 52%;
-        }
-
-        .service-text {
-          font-size: max(1.2vmax, 0.7rem);
-        }
-      }
-    }
-
-    .egg-img,
-    .red-cup {
-      flex-basis: 50%;
-    }
-
-    .mobile-img {
-      display: none;
-    }
-
-    .desktop-img {
-      display: block;
-    }
-
-    .transform {
-      h2 {
-        width: 80%;
-      }
-      order: -1;
-      padding: 0;
-    }
-
-    .red-cup {
-      padding: 0;
     }
 
     .service-images {
       flex-basis: 50%;
+
+      .mobile-img {
+        display: none;
+      }
+
+      .desktop-img {
+        display: block;
+      }
     }
 
     .service {
@@ -218,46 +139,46 @@
       flex-basis: 50%;
       align-items: center;
       padding: 0;
+
+      .text-content-box {
+        width: 60%;
+
+        .service-text {
+          font-size: max(1.2vmax, 0.7rem);
+        }
+      }
     }
 
-    .text-content-box {
-      width: 60%;
-      min-width: 270px;
+    .heading {
+      font-size: max(2vmax, 1.2rem);
+    }
+
+    .transform {
+      h2 {
+        width: 80%;
+      }
+      order: -1;
+    }
+
+    .graphic-text-section {
+      p {
+        width: 52%;
+      }
 
       .service-text {
         font-size: max(1.2vmax, 0.7rem);
       }
     }
-
-    .heading {
-      font-weight: 900;
-      font-size: max(2vmax, 1.2rem);
-    }
   }
 
-  //TESTIMONIALS
-  .testimonials {
-    padding: 8em 5em 5em;
-    .title {
-      letter-spacing: 7px;
-    }
-
-    .review-group {
-      flex-direction: row;
-    }
-
-    .review {
-      padding: 2em 1.25em;
-    }
-  }
-
+  // Photo Gallery Section
   .photo-gallery {
     grid-template-columns: repeat(4, 1fr);
 
     .mobile-img {
       display: none;
     }
-    
+
     .desktop-img {
       display: block;
     }

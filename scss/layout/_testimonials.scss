@@ -1,0 +1,67 @@
+.testimonials {
+  padding: 3em 2em 2em;
+  text-align: center;
+
+  .title {
+    margin-bottom: 3em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $grayish-blue;
+    font-size: 1em;
+  }
+
+  .review-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .review {
+    margin-bottom: 4em;
+
+    .client-img {
+      border-radius: 50%;
+      height: 75px;
+      width: 75px;
+    }
+
+    .quote {
+      line-height: 1.7;
+      margin: 1.5em 0;
+      color: $very-dark-grayish-blue;
+    }
+
+    .name {
+      color: $very-dark-desaturated-blue;
+      margin-bottom: 1em;
+      font-weight: 900;
+    }
+
+    .job {
+      font-size: 1rem;
+      color: $grayish-blue;
+    }
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .testimonials {
+    padding: 8em 5em 5em;
+    .title {
+      letter-spacing: 7px;
+    }
+
+    .review-group {
+      flex-direction: row;
+    }
+
+    .review {
+      padding: 2em 2em;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 900px) {
+  .testimonials {
+    padding: 8em 0em 5em;
+  }
+}
