@@ -18,8 +18,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -36,14 +34,14 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/amallen1/sunnyside-landing-pg)
-- Live Site URL: [Site](https://heuristic-hoover-3b7371.netlify.app/)
+- Live Site URL: [Sunnyside Landing Page](https://heuristic-hoover-3b7371.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- SASS
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow

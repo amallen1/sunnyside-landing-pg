@@ -435,9 +435,11 @@ footer .social-icons {
   justify-content: center;
   margin: 3.5em auto;
 }
-footer .social-icons img {
+footer .social-icons a {
   margin: 0 1em;
-  cursor: pointer;
+}
+footer .social-icons a img:hover {
+  filter: brightness(0) invert(100%);
 }
 footer nav {
   justify-content: center;

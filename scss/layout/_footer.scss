@@ -12,9 +12,13 @@ footer {
     justify-content: center;
     margin: 3.5em auto;
 
-    img {
+    a {
       margin: 0 1em;
-      cursor: pointer;
+      img {
+        &:hover {
+          filter: brightness(0) invert(100%);
+        }
+      }
     }
   }
 
