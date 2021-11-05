@@ -2,6 +2,8 @@
 
 ![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)
 
+## Welcome! 👋
+
 This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -13,10 +15,8 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,11 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+| Mobile (375px)                                 | Desktop (1440px)                                 |
+| ---------------------------------------------- | ------------------------------------------------ |
+| ![Mobile](./screenshots/mobile_screenshot.png) | ![Desktop](./screenshots/desktop_screenshot.png) |
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/amallen1/sunnyside-landing-pg)
+- Solution URL: [FrontEndMentor Solution](https://www.frontendmentor.io/solutions/sunnyside-landing-pg-built-w-html-css-js-IBP2flpDU)
 - Live Site URL: [Sunnyside Landing Page](https://heuristic-hoover-3b7371.netlify.app/)
 
 ## My process
@@ -42,17 +44,11 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SCSS
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
 I learned new properties of flexbox such as flex-basis which helped me to make the images and text sections equal. I also learned how to do transitions such as the ones that appear when you hover over the desktop links. I'm also training my eye to look for fine details by constantly revising the code until the my version of the code (padding, margin, font-size, etc) looks very similar to the original design's without using the project's design files.
-
-### Continued development
-
---
 
 ### Useful resources
 

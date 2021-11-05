@@ -63,7 +63,7 @@ header {
   background-position: center 80%;
 }
 
-nav {
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,11 +72,11 @@ nav {
   padding: 1.5em 0;
   position: relative;
 }
-nav a {
+.header-nav a {
   display: flex;
   align-items: center;
 }
-nav .menu-btn {
+.header-nav .menu-btn {
   cursor: pointer;
   position: relative;
 }
@@ -442,6 +442,10 @@ footer .social-icons a img:hover {
   filter: brightness(0) invert(100%);
 }
 footer nav {
+  justify-content: center;
+}
+footer nav .footer-links {
+  display: flex;
   justify-content: center;
 }
 footer nav a {

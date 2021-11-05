@@ -22,9 +22,13 @@ footer {
     }
   }
 
-  nav {
+  .footer-nav {
     justify-content: center;
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+    }
     a {
       color: $dark-moderate-cyan;
       margin: 0 1em;
